@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SCRIPT>
+
+
+    function User(id, name, surname, email, phone) {
+        this.id = id
+            this.name = name
+            this.surname = surname
+            this.email = email
+            this.phone = phone
+
+    }
+
+    const userArr = [
+        new User(14, 'Stepan', 'Giga', 'sg@gmail.com', 30680000001),
+        new User(2, 'Olko', 'Atb', 'av@gmail.com', 30680000002),
+        new User(36, 'Nina', 'Ola', 'ddf@gmail.com', 30680000003),
+        new User(43, 'Stepan', 'Btn', 'gtr@gmail.com', 30680000004),
+        new User(5, 'Stecia', 'Luziv', 'sde@gmail.com', 30680000005),
+        new User(61, 'Stepan', 'Misko', 'ashh@gmail.com', 30680000006),
+        new User(78, 'Yozef', 'Liga', 'uj7@gmail.com', 30680000007)
+     ];
+     console.log(userArr);
+
+
+
+
+
+    let filterUser = userArr.filter((item) => {
+         if (item.id % 2 === 0){
+         return item
+         }});
+     console.log(filterUser);
+
+
+
+    console.log(userArr.sort((a, b) => a.id - b.id));
+
+
+
+     class Client {
+         constructor(id, name, surname, email, phone, order) {
+             this.id = id;
+             this.name = name;
+             this.surname = surname;
+             this.email = email;
+             this.phone = phone;
+             this.order = order;
+         }
+     }
+
+
+
+     let emptyArray = [
+         new Client(3, 'Liga', 'Giga', 'sg@gmail.com', 30680000001, ['book', 'game', 'ps4']),
+         new Client(1, 'Smeha', 'Rony', 'oli@gmail.com', 30680000002, ['magasine', 'shop', 'ps3']),
+         new Client(2, 'Zipko', 'Tevez', 'zeru@gmail.com', 30680000003, ['football', 'ps5']),
+         new Client(4, 'Study', 'Olivie', 'kosmos@gmail.com', 30680000004, ['hobbis']),];
+     console.log(emptyArray);
+
+
+
+     let sortCLients = emptyArray.sort((a, b) => a.order.length - b.order.length);
+     console.log(sortCLients)
+
+
+
+
+
+
+</SCRIPT>
+</body>
+</html>

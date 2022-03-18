@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+function Car (model, virobnik, year, MaxSpeed, obyem) {
+    this.model = model
+    this.virobnik = virobnik
+    this.year = year
+    this.MaxSpeed = MaxSpeed
+    this.obyem = obyem
+    this.drive = function () {
+        console.log(`їдемо зі швидкістю ${this.MaxSpeed} на годину`);
+    }
+let newSpeed = 30;
+    this.info = function () {
+        for (const key in this) {
+            if (typeof this[key] !== 'function')
+                console.log(`${key} - ${this[key]}`)
+
+
+        }
+        this.newMaxSpeed = function (newSpeed) {
+                     this.maxspeed = this.maxspeed + newSpeed;
+
+        }
+        this.changeYear = function (newValue) {
+                     this.year = newValue;
+                 };
+                 this.addDriver = function (driver) {
+                     this.driver = driver;
+                 };
+    }
+
+}
+
+ let addCar = new Car('Peugeot', 'France', 2000, 270, 2.0);
+ console.log(addCar);
+ addCar.drive();
+ addCar.info();
+ addCar.maxspeed(20);
+ addCar.drive();
+ addCar.changeYear(2010)
+ addCar.info();
+ addCar.addDriver('Vasil')
+ console.log(addCar)
+
+
+ class Cars2 {
+     constructor(model, producer, year, maxspeed, engineVal) {
+         this.model = model;
+        this.producer = producer;
+         this.year = year;
+         this.maxspeed = maxspeed;
+         this.engineVal = engineVal;
+     }
+     drive() {
+         console.log(`їдемо зі швидкістю ${this.maxspeed} на годину`);
+    }
+     info() {
+         for (const key in this) {
+             console.log(`${key} - ${this[key]}`)
+         }
+     }
+     newMaxSpeed (newSpeed) {
+         this.maxspeed = this.maxspeed + newSpeed;
+     }
+     changeYear (newValue) {
+         this.year = newValue;
+     }
+     addDriver (driver) {
+         this.driver = driver;
+     }
+ }
+
+ let addCar2 = new Cars2('Peugeot', 'France', 2000, 270, 2.0);
+ console.log(addCar2);
+ addCar2.drive();
+ addCar2.info();
+ addCar2.newMaxSpeed(20);
+ addCar2.drive();
+ addCar2.changeYear(2010)
+ addCar2.info();
+ addCar2.addDriver('Vasil')
+ console.log(addCar2)
+
+
+
+
+ class Popelushka {
+    constructor(name, age, size) {
+         this.name = name;
+         this.age = age;
+         this.footsize = size;
+     }
+ }
+
+ const popelushka = [
+     new Popelushka('igor', 22, 46),
+    new Popelushka('nina', 21, 25),
+     new Popelushka('ira', 24, 30),
+    new Popelushka('lesia', 26, 31),
+  new Popelushka('nadia', 29, 32),
+     new Popelushka('genia', 90, 58),
+     new Popelushka('lola', 87, 34),
+     new Popelushka('goha', 34, 39),
+ ];
+ console.log(popelushka);
+
+</script>
+</body>
+</html>
